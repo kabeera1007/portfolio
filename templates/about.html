@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>About Me - My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <header>
-        <h1>About Me</h1>
         <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/projects">Projects</a>
-            <a href="/contact">Contact</a>
+            <div class="logo">My Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
-    <main>
-        <p>I am a data scientist with expertise in AI, data engineering, and cloud technologies.</p>
-    </main>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>About Me</h1>
+            <p>I'm a passionate data professional with experience in AI, data science, and ethical AI practices. I believe in the transformative power of technology and its potential to make a positive impact on society. My focus is on creating ethical solutions and contributing to data-driven advancements.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
 </body>
 </html>
