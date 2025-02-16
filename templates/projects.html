@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - Projects</title>
+    <title>Projects - My Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
@@ -14,15 +14,31 @@
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
-                <li><a href="/projects" class="active">Projects</a></li>
+                <li><a href="/projects">Projects</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="projects">
-        <h1>My Projects</h1>
-        <!-- Add your project details here -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>My Projects</h1>
+            <p>Here are some of the projects I've worked on, showcasing my skills in data science, AI, and ethical AI practices.</p>
+            <div class="project-list">
+                <div class="project-item">
+                    <h2>Project 1</h2>
+                    <p>A brief description of project 1.</p>
+                </div>
+                <div class="project-item">
+                    <h2>Project 2</h2>
+                    <p>A brief description of project 2.</p>
+                </div>
+                <div class="project-item">
+                    <h2>Project 3</h2>
+                    <p>A brief description of project 3.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -30,4 +46,3 @@
     </footer>
 </body>
 </html>
-
