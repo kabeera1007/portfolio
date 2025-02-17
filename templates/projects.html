@@ -6,6 +6,36 @@
     <title>Projects - My Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .project-card {
+            background: #2c2c2c;
+            color: white;
+            width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        .project-card h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        .project-card p {
+            font-size: 1em;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -25,18 +55,36 @@
             <h1>My Projects</h1>
             <p>Here are some of the projects I've worked on, showcasing my skills in data science, AI, and ethical AI practices.</p>
             <div class="project-list">
-                <div class="project-item">
-                    <h2>Project 1</h2>
-                    <p>A brief description of project 1.</p>
-                </div>
-                <div class="project-item">
-                    <h2>Project 2</h2>
-                    <p>A brief description of project 2.</p>
-                </div>
-                <div class="project-item">
-                    <h2>Project 3</h2>
-                    <p>A brief description of project 3.</p>
-                </div>
+                <!-- Project Card 1 -->
+                <a href="/project1.html" class="project-card">
+                    <h3>Project 1</h3>
+                    <p>Short description of project 1.</p>
+                </a>
+                <!-- Project Card 2 -->
+                <a href="/project2.html" class="project-card">
+                    <h3>Project 2</h3>
+                    <p>Short description of project 2.</p>
+                </a>
+                <!-- Project Card 3 -->
+                <a href="/project3.html" class="project-card">
+                    <h3>Project 3</h3>
+                    <p>Short description of project 3.</p>
+                </a>
+                <!-- Project Card 4 -->
+                <a href="/project4.html" class="project-card">
+                    <h3>Project 4</h3>
+                    <p>Short description of project 4.</p>
+                </a>
+                <!-- Project Card 5 -->
+                <a href="/project5.html" class="project-card">
+                    <h3>Project 5</h3>
+                    <p>Short description of project 5.</p>
+                </a>
+                <!-- Project Card 6 -->
+                <a href="/project6.html" class="project-card">
+                    <h3>Project 6</h3>
+                    <p>Short description of project 6.</p>
+                </a>
             </div>
         </div>
     </section>
