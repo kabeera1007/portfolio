@@ -92,6 +92,7 @@
       font-weight: bold;
       background: linear-gradient(90deg, #ff5733, #ffcc33);
       -webkit-background-clip: text;
+      background-clip: text;
       color: transparent;
     }
     .hero p {
@@ -312,7 +313,7 @@
     <div class="logo">Kuldeep Parmar</div>
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
+      <li><a href="/about">About Me</a></li>
       <li><a href="/projects">Projects</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
@@ -322,8 +323,8 @@
   <section class="hero">
     <div class="hero-content">
       <h1>Unleashing the Power of Data</h1>
-      <p>Transforming Ideas into Reality with Cutting-Edge Technology</p>
-      <a href="/contact" class="btn">Let’s Collaborate</a>
+      <p>Transforming Ideas and Information into Reality with Cutting-Edge Technology and Wisdom.</p>
+      
     </div>
     <div class="floating"></div>
     <div class="floating"></div>
@@ -332,26 +333,41 @@
 
   <section class="story-section">
     <div class="card" data-aos="fade-up">
-      <h2>Why we need Data experts</h2>
-      <p>As Heraclitus once said, 'You cannot step into the same river twice.' Life, like data, is constantly evolving, shifting, and adapting.</p>
-      <img src="https://via.placeholder.com/150" alt="Data Experts" class="card-img">
-    </div>
+      <h2>Why Do We Need Data Experts?</h2>
+      <p>
+        The world is overflowing with data and advance technology. To make the most use of it,  
+        we need experts who can analyze and interpret data effectively.  
+        <p>Distinguishing the signal from the noise</strong> requires both  
+        scientific knowledge and self-knowledge.  
+        <strong>the serenity to accept the things we cannot predict, and the courage to predict the things we can,</strong> is  
+        crucial for making informed decisions.  </p>
+        <br>
+        Lastly, it takes wisdom to recognize the difference between what we can predict and what we cannot that shapes our future.
+      </p>
+      <img src="{{ url_for('static', filename='why.jpg') }}" alt="Data Experts" class="card-img" >
+    </div>      
     <div class="card" data-aos="fade-up" data-aos-delay="100">
-      <h2>My Journey</h2>
-      <p>"My journey began not in the world of data, but in the sacred spaces of the mountains and jungles, where the mysteries of life unfolded before me. Each moment there was a lesson in resilience, patience, and understanding."</p>
-      <p>"With eight years of travel, hands-on experience with data, and a deep ethical foundation, I am now a mentor, a teacher, and an explorer of data's endless possibilities."</p>
-      <img src="https://via.placeholder.com/150" alt="Journey" class="card-img">
+      <h2>What makes me apart from the rest?</h2>
+      <p>"My journey didn’t start with data—it began in the <strong>sacred spaces</strong> of mountains and jungles, where life’s <strong>raw mysteries</strong> shaped my perspective."</p>
+      <p>"Travelling for over 7 years, I developed <strong>resilience</strong>, <strong>patience</strong>, and a deep understanding of patterns, both in nature and in information."</p>
+      <p>"My travels and hands-on work with data have molded me into an explorer of both life and information, anchored by a strong <strong>ethical foundation</strong> guiding every step."</p>
+      <img src="{{ url_for('static', filename='GYny.gif') }}" alt="Unique Perspective" class="card-img">
     </div>
+    
     <div class="card" data-aos="fade-up" data-aos-delay="200">
-      <h2>How</h2>
-      <p>"It is in this flow that I found my true calling—data is the current, the essence that connects everything. It was through my travels across mountains and jungles, in the midst of life's raw, unfiltered phases, that I learned the power of observation and the importance of patterns. Just as the world reveals itself through experiences, so too does data reveal truths waiting to be discovered. This journey has shaped me into a guide, a mentor, and a data specialist—ready to help you navigate the complexities of the digital world.</p>
-      <p>"Data is my passion; it is the sea I dive into every day. I see data not just as numbers, but as the pulse of the world. Whether it’s transforming raw data through ETL, deploying cloud solutions, or solving complex problems with machine learning, I approach every challenge with a sense of purpose. My expertise spans the realms of ETL, cloud computing, data science, and machine learning, and I work with powerful tools like Git, Docker, Terraform, Spark, Airflow, dbt, AWS, GCP, Tableau, and Python. The future of decision-making lies in how we understand and utilize data, and this is where I can help you. Together, we can craft the future, with data as our guiding star."</p>
-      <img src="https://via.placeholder.com/150" alt="How" class="card-img">
+      <h2>How will I help You ?</h2>
+      <p>"With expertise in <strong>ETL, cloud computing, data science, and machine learning</strong>, I bring a purposeful approach to every data challenge."</p>
+      <p>"Whether it’s transforming raw data, deploying cloud solutions, or solving complex problems with machine learning, I leverage powerful tools like <strong>Git, Docker, Terraform, Spark, Airflow, dbt, AWS, GCP, Tableau, and Python</strong> to create impactful solutions."</p>
+      <p>"The future of decision-making depends on how well we understand and use data. Together, we can harness its power to shape a <strong>smarter, data-driven future</strong>."</p>
+      <img src="{{ url_for('static', filename='how.jpg') }}" alt="Helping with Data" class="card-img">
+      <a href="/projects" class="btn">Some of my works.</a>
     </div>
+    
     <div class="card" data-aos="fade-up" data-aos-delay="300">
-      <h2>Opportunity</h2>
+      <h2>Let's join the journey together!</h2>
       <p>"Let's embark on this journey together. The world is full of data, and together, we can make sense of it to change the future. Reach out to me, and let's create something extraordinary."</p>
-      <img src="https://via.placeholder.com/150" alt="Opportunity" class="card-img">
+      <img src="{{ url_for('static', filename='offer.png') }}" alt="Opportunity" class="card-img">
+      <a href="/contact" class="btn">Let’s Collaborate</a>
     </div>
   </section>
 
@@ -392,8 +408,8 @@
     .card-img {
       margin-top: 20px;
       border-radius: 10px;
-      width: 120px; /* Reduced image size */
-      height: 120px; /* Reduced image size */
+      width: 350px; /* Reduced image size */
+      height: 250px; /* Reduced image size */
       object-fit: cover;
       transition: transform 0.3s;
     }
