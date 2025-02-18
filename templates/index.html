@@ -317,11 +317,9 @@
       <li><a href="/contact">Contact</a></li>
     </ul>
   </header>
+  
   <!-- HERO SECTION -->
   <section class="hero">
-    <video autoplay muted loop>
-      <source src="https://source.unsplash.com/1600x900/?technology,abstract" type="video/mp4">
-    </video>
     <div class="hero-content">
       <h1>Unleashing the Power of Data</h1>
       <p>Transforming Ideas into Reality with Cutting-Edge Technology</p>
@@ -331,6 +329,104 @@
     <div class="floating"></div>
     <div class="floating"></div>
   </section>
+
+  <section class="story-section">
+    <div class="card" data-aos="fade-up">
+      <h2>Why we need Data experts</h2>
+      <p>As Heraclitus once said, 'You cannot step into the same river twice.' Life, like data, is constantly evolving, shifting, and adapting.</p>
+      <img src="https://via.placeholder.com/150" alt="Data Experts" class="card-img">
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <h2>My Journey</h2>
+      <p>"My journey began not in the world of data, but in the sacred spaces of the mountains and jungles, where the mysteries of life unfolded before me. Each moment there was a lesson in resilience, patience, and understanding."</p>
+      <p>"With eight years of travel, hands-on experience with data, and a deep ethical foundation, I am now a mentor, a teacher, and an explorer of data's endless possibilities."</p>
+      <img src="https://via.placeholder.com/150" alt="Journey" class="card-img">
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <h2>How</h2>
+      <p>"It is in this flow that I found my true calling—data is the current, the essence that connects everything. It was through my travels across mountains and jungles, in the midst of life's raw, unfiltered phases, that I learned the power of observation and the importance of patterns. Just as the world reveals itself through experiences, so too does data reveal truths waiting to be discovered. This journey has shaped me into a guide, a mentor, and a data specialist—ready to help you navigate the complexities of the digital world.</p>
+      <p>"Data is my passion; it is the sea I dive into every day. I see data not just as numbers, but as the pulse of the world. Whether it’s transforming raw data through ETL, deploying cloud solutions, or solving complex problems with machine learning, I approach every challenge with a sense of purpose. My expertise spans the realms of ETL, cloud computing, data science, and machine learning, and I work with powerful tools like Git, Docker, Terraform, Spark, Airflow, dbt, AWS, GCP, Tableau, and Python. The future of decision-making lies in how we understand and utilize data, and this is where I can help you. Together, we can craft the future, with data as our guiding star."</p>
+      <img src="https://via.placeholder.com/150" alt="How" class="card-img">
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="300">
+      <h2>Opportunity</h2>
+      <p>"Let's embark on this journey together. The world is full of data, and together, we can make sense of it to change the future. Reach out to me, and let's create something extraordinary."</p>
+      <img src="https://via.placeholder.com/150" alt="Opportunity" class="card-img">
+    </div>
+  </section>
+
+  <style>
+    .story-section {
+      padding: 50px 20px;
+      background: rgba(15, 15, 15, 0.9); /* Adding a subtle background color */
+    }
+    .card {
+      width: 70%; /* Reduced width by 30% */
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px auto; /* Centering the card horizontally */
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(255, 87, 51, 0.5);
+    }
+    .card h2 {
+      font-size: 30px; /* Reduced font size */
+      font-weight: bold;
+      background: linear-gradient(90deg, #ff5733, #ffcc33);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .card p {
+      font-size: 16px; /* Reduced font size */
+      line-height: 1.6;
+      color: #fff;
+    }
+    .card-img {
+      margin-top: 20px;
+      border-radius: 10px;
+      width: 120px; /* Reduced image size */
+      height: 120px; /* Reduced image size */
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+  </style>
+<!-- Add this script before the closing </body> tag -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.card');
+      let lastVisibleIndex = 0;
+
+      window.addEventListener('scroll', function() {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        cards.forEach((card, index) => {
+          const cardTop = card.offsetTop;
+          if (scrollTop >= cardTop - window.innerHeight / 2) {
+            cards[lastVisibleIndex].classList.add('hidden');
+            lastVisibleIndex = index;
+            card.classList.remove('hidden');
+          }
+        });
+      });
+
+      cards.forEach((card, index) => {
+        card.addEventListener('mouseenter', function() {
+          if (index > lastVisibleIndex) {
+            cards[lastVisibleIndex].classList.add('hidden');
+            lastVisibleIndex = index;
+          }
+        });
+      });
+    });
+  </script>
+
   <!-- BUBBLE SKILLS (Fixed Floating Cards) & ROUND BUBBLES -->
   <div class="bubble-container">
     <!-- 20 Skill Bubbles -->

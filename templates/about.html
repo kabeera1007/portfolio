@@ -115,10 +115,12 @@
       margin: 20px 0;
       position: relative;
       border-radius: 8px;
-      transition: transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     .timeline-item:hover {
       transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(255, 87, 51, 0.5);
     }
     .timeline-item::before {
       content: '\2022';
@@ -241,43 +243,47 @@
   </section>
 
   <section class="timeline">
-    <div class="timeline-item">
+    <div class="timeline-item" data-aos="fade-up">
         <h3>2024 - Master's Degree at UE Potsdam</h3>
         <p>Embarking on a deeper academic journey, mastering AI and data science at the University of Europe, Potsdam.</p>
     </div>
-    <div class="timeline-item">
+    <div class="timeline-item" data-aos="fade-up">
         <h3>2023 - Postgraduate Diploma</h3>
         <p>Diving deeper into specialization with a postgraduate diploma, expanding expertise in data science.</p>
     </div>
-    <div class="timeline-item">
+    <div class="timeline-item" data-aos="fade-up">
         <h3>2022 - Data Science Mentor</h3>
         <p>Stepped into the world of mentorship, guiding aspiring data professionals and sharing knowledge.</p>
     </div>
-    <div class="timeline-item">
+    <div class="timeline-item" data-aos="fade-up">
         <h3>2021 - Graduation Completed</h3>
         <p>Officially became a graduate, ready to take on the world of AI and analytics.</p>
     </div>
-    <div class="timeline-item">
+    <div class="timeline-item" data-aos="fade-up">
         <h3>2012 - The Journey Begins</h3>
         <p>Took the first major step in higher education, setting the foundation for my career.</p>
     </div>
-    <div class="timeline-item">
+    <div class="timeline-item" data-aos="fade-up">
         <h3>2011 - Higher Secondary (10+2)</h3>
         <p>Wrapped up school with curiosity and ambition, eager to explore new possibilities.</p>
     </div>
-    <div class="timeline-item">
+    <div class="timeline-item" data-aos="fade-up">
         <h3>2009 - Schooling Completed</h3>
         <p>Completed my secondary education, stepping into the wider world of knowledge.</p>
     </div>
-    <div class="timeline-item">
+    <div class="timeline-item" data-aos="fade-up">
         <h3>1994 - The World Welcomed Me</h3>
         <p>The year the world was introduced to me, the same year the World Wide Web saw its first website!</p>
     </div>
-</section>
+  </section>
 
   <footer>
     &copy; 2025 Kuldeep Parmar | Powered by Passion & Data
   </footer>
+
+  <script>
+    AOS.init(); // Initialize AOS animations
+  </script>
 
 </body>
 </html>
