@@ -1,34 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - My Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unleashing the Power of Data</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+
+  <!-- AOS (Animate on Scroll) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  
+  <!-- Custom Styling -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #fff;
+    }
+
+    /* NAVIGATION */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 50px;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin: 0 15px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ff5733;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 120px 20px 50px;
+      text-align: center;
+      position: relative;
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .hero img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 10px;
+    }
+    .hero h1 {
+      font-size: 34px;
+      margin: 10px 0;
+    }
+    .hero blockquote {
+      font-size: 18px;
+      font-style: italic;
+      opacity: 0.9;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      max-width: 700px;
+      margin: 50px auto;
+      padding-left: 20px;
+      border-left: 3px dashed #ff6347;
+    }
+    .timeline-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      margin: 20px 0;
+      position: relative;
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .timeline-item:hover {
+      transform: scale(1.05);
+    }
+    .timeline-item::before {
+      content: '\2022';
+      color: #ff6347;
+      font-size: 20px;
+      position: absolute;
+      left: -12px;
+      top: 12px;
+    }
+    .timeline-item h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #ff6347;
+    }
+    .timeline-item p {
+      margin: 5px 0;
+      font-size: 15px;
+      color: #ddd;
+    }
+
+    /* Bubbles Effect */
+    .bubbles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .bubbles span {
+      position: absolute;
+      bottom: -50px;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 99, 71, 0.3);
+      border-radius: 50%;
+      animation: floatUp linear infinite;
+    }
+    .bubbles span:nth-child(1) {
+      left: 10%;
+      width: 15px;
+      height: 15px;
+      animation-duration: 6s;
+      animation-delay: 1s;
+    }
+    .bubbles span:nth-child(2) {
+      left: 30%;
+      width: 25px;
+      height: 25px;
+      animation-duration: 8s;
+      animation-delay: 3s;
+    }
+    .bubbles span:nth-child(3) {
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      animation-duration: 5s;
+      animation-delay: 2s;
+    }
+    .bubbles span:nth-child(4) {
+      left: 70%;
+      width: 20px;
+      height: 20px;
+      animation-duration: 7s;
+      animation-delay: 4s;
+    }
+    .bubbles span:nth-child(5) {
+      left: 90%;
+      width: 30px;
+      height: 30px;
+      animation-duration: 9s;
+      animation-delay: 6s;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-800px);
+        opacity: 0;
+      }
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(20, 20, 20, 0.9);
+      color: white;
+      margin-top: 50px;
+    }
+
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">My Portfolio</div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section class="hero">
-        <div class="hero-content">
-            <h1>About Me</h1>
-            <p>I'm a passionate data professional with experience in AI, data science, and ethical AI practices. I believe in the transformative power of technology and its potential to make a positive impact on society. My focus is on creating ethical solutions and contributing to data-driven advancements.</p>
-        </div>
-    </section>
 
-    <footer>
-        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
-    </footer>
+  <header>
+    <div class="logo">Kuldeep Parmar</div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <div class="bubbles">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <section class="hero">
+    <img src="{{ url_for('static', filename='me11.png') }}" alt="Kuldeep Parmar" />
+    
+    <blockquote>
+      "What we are looking for is looking for us."
+    </blockquote>
+  </section>
+
+  <section class="timeline">
+    <div class="timeline-item">
+        <h3>2024 - Master's Degree at UE Potsdam</h3>
+        <p>Embarking on a deeper academic journey, mastering AI and data science at the University of Europe, Potsdam.</p>
+    </div>
+    <div class="timeline-item">
+        <h3>2023 - Postgraduate Diploma</h3>
+        <p>Diving deeper into specialization with a postgraduate diploma, expanding expertise in data science.</p>
+    </div>
+    <div class="timeline-item">
+        <h3>2022 - Data Science Mentor</h3>
+        <p>Stepped into the world of mentorship, guiding aspiring data professionals and sharing knowledge.</p>
+    </div>
+    <div class="timeline-item">
+        <h3>2021 - Graduation Completed</h3>
+        <p>Officially became a graduate, ready to take on the world of AI and analytics.</p>
+    </div>
+    <div class="timeline-item">
+        <h3>2012 - The Journey Begins</h3>
+        <p>Took the first major step in higher education, setting the foundation for my career.</p>
+    </div>
+    <div class="timeline-item">
+        <h3>2011 - Higher Secondary (10+2)</h3>
+        <p>Wrapped up school with curiosity and ambition, eager to explore new possibilities.</p>
+    </div>
+    <div class="timeline-item">
+        <h3>2009 - Schooling Completed</h3>
+        <p>Completed my secondary education, stepping into the wider world of knowledge.</p>
+    </div>
+    <div class="timeline-item">
+        <h3>1994 - The World Welcomed Me</h3>
+        <p>The year the world was introduced to me, the same year the World Wide Web saw its first website!</p>
+    </div>
+</section>
+
+  <footer>
+    &copy; 2025 Kuldeep Parmar | Powered by Passion & Data
+  </footer>
+
 </body>
 </html>
