@@ -211,20 +211,20 @@
   <section class="contact-container">
     <!-- Contact Information Card -->
     <div class="contact-card" data-aos="fade-right">
-      <h2>Contact Information</h2>
-      <p>Nationality: Indian</p>
-      <p>📞 Phone number: (+49) 15510246228</p>
-      <p>📧 Email address: way2mahadev@gmail.com</p>
-      <p>🏠 Home: 2, Bornholmer straße, 10439 Berlin (Germany)</p>
-    </div>
+      <h2>Contact Me</h2>
+      <p>📞 Phone : (+49) 15510246228</p>
+      <p>🏠 Address : Berlin, Germany</p>
+      <p>🐙 GitHub : <a href="https://github.com/kabeera1007" target="_blank" style="color: white;">github.com/kabeera1007</a></p>
+      <p>📧 Email Address </Address> : <a href="mailto:way2mahadev@gmail.com" target="_blank" style="color: white;">way2mahadev@gmail.com </a></p>
+  </div>
 
     <!-- Contact Form Card -->
     <div class="contact-card" data-aos="fade-left">
       <h2>Get in Touch</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
+      <form class="contact-form" method="POST" action="/contact">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
       </form>
     </div>
