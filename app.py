@@ -11,7 +11,6 @@ def write_to_csv(data, file_path=CSV_FILE):
     with open(file_path, mode='a', newline='', encoding='utf-8') as csvfile:
         fieldnames = ['Name', 'Email', 'Message']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        # Write header if file doesn't exist
         if not file_exists:
             writer.writeheader()
         writer.writerow(data)
@@ -30,10 +29,8 @@ def contact():
         name = request.form.get('name')
         email = request.form.get('email')
         message = request.form.get('message')
-        # Save data to CSV file
         write_to_csv({'Name': name, 'Email': email, 'Message': message})
-        
-        return redirect('/contact')  # Redirect to avoid resubmission on refresh
+        return redirect('/contact')
     return render_template('contact.html')
 
 @app.route('/projects')
@@ -42,5 +39,4 @@ def projects():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
 
